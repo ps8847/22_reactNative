@@ -1,0 +1,9 @@
+Prerequisites : 
+
+	basic knowledge of android applications working 
+	Knowledge of Reactjs and Javascript 
+
+React native is a a framework used for native app development 
+	App made using this framework can run on both android as well as on IOS 
+
+popular apps made using react native as like flipcart  ,instagram , facebook

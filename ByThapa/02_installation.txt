@@ -1,0 +1,49 @@
+
+1) Install NodeJS
+    CHECK = node -v 
+
+2) Install NPM 
+    CHECK = npm -v 
+
+3) CoDE EDITOR LIKE vScODE 
+
+4) CREATE A FOLDER WHERE WE WANT TO INSTALL REACT-NATIVE 
+
+Now ......
+
+Run this following command to Install the expo-cli : 
+
+    npm install -g expo-cli
+
+        now go to that folder and write followi9ng command to cretae the app  :  
+
+    npx create-expo-app ProjectName
+
+*********************  FOR DEVICE *******************************
+
+    now after that run  :  npm start
+
+    It will open a QR Code to run your App in your Device .. 
+
+    nOW GO TO Playstore/App Store and install EXPO named app ,  open that app and scan that QR cODE PRESENT IN YOUR TERMINAL , ,,,''
+
+    Thats it ... 
+
+
+    Now you can see the output on your device . from now on whnever you will chnage antyhgting on your code .. it will reflect instantly on your device
+
+*********************  FOR wEB BROWSER *******************************
+
+    To see the app in web browser then click w in terminal and install the related dependencies they are asking to install to run in browser ,,
+
+    in my case at my time it was like below : 
+
+    npx expo install react-native-web@~0.19.6 react-dom@18.2.0 @expo/webpack-config@^19.0.0
+
+    after installing just again type : npm start  and type w         ,, 
+
+
+    Thats it 
+
+
+(Note :  IN SOME Systems we can use one of them at a time eaither web or our device)

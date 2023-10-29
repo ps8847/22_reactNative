@@ -1,0 +1,19 @@
+Prerequisites : 
+
+	basic knowledge of android applications working 
+	Knowledge of Reactjs and Javascript 
+
+React native is a a framework used for native app development 
+	App made using this framework can run on both android as well as on IOS 
+
+    it will savfe company's cost for diffrent diffenret teams
+
+popular apps made using react native as like flipcart  ,instagram , facebook
+
+
+ADVANTAGES : 
+
+    * cross-platform app 
+    * save time & money 
+    * big community 
+    * big companies
