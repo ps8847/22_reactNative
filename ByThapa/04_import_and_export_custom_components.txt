@@ -1,0 +1,1 @@
+juts like react's import and export ,,, for instance just see the folder performed

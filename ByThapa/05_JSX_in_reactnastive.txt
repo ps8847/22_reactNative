@@ -1,0 +1,11 @@
+Imp : jsx is not a sopecial way to embed html in javascript . all jsx does is replace a file's <tags> with equaivalent calls to React.createElement() , we can see it live on babel . https://babeljs.io/ 
+
+1: we can refer to js variables inside a jsx block by using curly braces.
+
+2: always return jsx using() or grouping tags. never give the return value undefiened .
+
+3: we can assign jsx elements to a variable , then we can show that variable inside a jsx block 
+
+4: we can assemble different jsx elements like normal html. (using view)
+
+5: ANY JAVASCRIPT EXPRESSION WILL WORK BETWEEN CURLY BRACES , INCLUDING FUBNCTION CALLS LIKE GETFULLnAME("PRINCE" , "SHARMA")

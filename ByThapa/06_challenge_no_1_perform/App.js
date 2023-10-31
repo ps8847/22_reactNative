@@ -1,13 +1,13 @@
 
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import FlatListEDemo from "./src/Screens/FlatListEDemo";
+import FirstChallenge from "./src/Screens/FirstChallenge";
 
 const App = () => {
 
   return (
   <View>
-<FlatListEDemo />
+<FirstChallenge />
   </View>
  )
 }

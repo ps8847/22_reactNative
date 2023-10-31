@@ -1,0 +1,7 @@
+write a prograsm which show three text elements 
+
+A : the first should say "Welcome to prince sharma channel : also give the text color blue  ,  make it bold text with font size 40 using styling .
+
+B: the second should say "We love react native and i ama  subscroiber of prinvce sharma channel" and have aa font siz eof 30 
+
+C: the third one should say "Hii , my name is <yourname>" and you need to assign your name to a variable then print it up in jsx elements.
