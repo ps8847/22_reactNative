@@ -19,8 +19,6 @@ const FlatListEDemo = () => {
       }}
       data={names}
       horizontal
-      showsHorizontalScrollIndicator={false}
-      inverted
       renderItem={(element) => {
         return <Text style={styles.textStyles}>{element.item.name}</Text>;
       }}
