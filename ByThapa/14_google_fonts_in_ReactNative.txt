@@ -1,0 +1,5 @@
+downlaod these two
+
+expo install @expo-google-fonts/josefin-sans 
+
+expo install expo-app-loading
