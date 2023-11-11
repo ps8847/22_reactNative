@@ -1,0 +1,1 @@
+just a css we are using till now for reactJs ,, with syntax as camelCase
