@@ -1,0 +1,1 @@
+just like normal flexboc in CSS  ,  but here in Reactjs flexbox works diffrently 
