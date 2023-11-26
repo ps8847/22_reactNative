@@ -1,0 +1,1 @@
+// challenge : flatList => create a netflix top 10 shows card and sisplay both vertically and horizontally 
