@@ -1,16 +1,14 @@
-
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import ContactYoutube from "./src/Screens/ContactYoutube";
 import CounterNumber from "./src/Screens/CounterNumber";
-import ColorGenerator from "./src/project/RandomColorGenerator";
 
 const App = () => {
-
   return (
-  <View>
-<ColorGenerator/>
-  </View>
- )
-}
+    <View>
+      <ContactYoutube />
+    </View>
+  );
+};
 
 export default App;
