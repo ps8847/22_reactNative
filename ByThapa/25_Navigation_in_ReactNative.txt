@@ -1,0 +1,66 @@
+its versions gets updated every 1 year ..
+ most used is version 6 
+
+ to insiall : npm i @react-navigation/native
+            : expo i react-native-screens react-native-safe-area-context
+            : npm i @react-navigation/native-stack
+
+
+1) 
+
+import React from "react";
+import ContactYoutube from "./src/Screens/ContactYoutube";
+import HomeYoutube from "./src/Screens/HomeYoutube";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+const App = () => {
+
+  const Stack = createNativeStackNavigator()
+  return (
+
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login">
+        <Stack.Screen name="Login" component={ContactYoutube}/>
+        <Stack.Screen name="Home" component={HomeYoutube}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+export default App;
+
+
+2) 
+
+const ContactYoutube = ({navigation}) => {
+  
+    const submit = () => {
+        navigation.navigate("Home" , {myName : userName})
+    };
+  
+    return (
+        <Pressable
+          onPress={() => submit()}>
+          Login
+        </Pressable>
+    );
+};
+
+
+export default ContactYoutube;
+
+3) 
+
+const HomeYoutube = ({route, navigation}) => {
+
+  const {myName} = route.params;
+
+  return (
+    <View>
+      <Text>Welcome {myName} 😊</Text>
+      <Button title="Go Back" onPress={() => navigation.goBack()}/>
+    </View>
+  )
+}
+
+export default HomeYoutube
