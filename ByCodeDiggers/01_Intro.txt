@@ -7,3 +7,23 @@ React native is a a framework used for native app development
 	App made using this framework can run on both android as well as on IOS 
 
 popular apps made using react native as like flipcart  ,instagram , facebook
+
+get more info on react native offical website 
+
+to run any app  :  
+
+	1) open the emulator in side 
+	2) npx react-native@latest init AwesomeProject
+	3) npm run android
+	4) npm start 
+	5) enter r in turminal 
+			thats it .......
+
+
+to open aa already installed react-Native app : 
+
+	1) open the emulator in side 
+	2) npm run android
+	3) npm start 
+	4) enter r in turminal 
+			thats it .......

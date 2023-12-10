@@ -1,0 +1,42 @@
+we have conered the reactNative with expo-Cli ,, 
+
+
+in this tutorial we will go with : React Native CLI 
+
+
+step 1 : go to react native website ->  https://reactnative.dev/docs/environment-setup
+step 2 : select the dveelopmemt OS + Target OS 
+step 3 : follow the choclaty installer for installing the java and nodejs (mentioned how ?  in react-native documentation with powershell)
+step 4 : downlaod androifd studio -> https://developer.android.com/studio
+            just install the things whihc sanrroid studio will tel;l you to intsall in beginnning +
+
+            download these things also ,,  
+
+            downlaod all the things said in the react-native doicun=mendatiobn related to android studio 
+
+step 5: set environment variables 
+        
+        open environment variables : 
+
+        in user Variable >>
+                name  : ANDROID_HOME
+                value  : C:\Users\win 11\AppData\Local\Android\Sdk
+
+        in system Variable >>
+               path > .  add new  >  C:\Users\win 11\AppData\Local\Android\Sdk\platform-tools
+
+step 6:  now just opena ny folder and open cmd and paste this command  :  npx react-native@latest init AwesomeProject
+        it iwll install the reactNative and will make you your first project 
+
+step 7: run this application : 
+
+open the virtual device in the side and then run the command mentioned in react native website  : npm run android
+       
+
+step 8:  run the react-nattive
+
+        after runnign aboive command :  it will take around 15-20 mninutes after that run this command : npm start
+
+
+Yeah!!!!!!!!!!!!!
+

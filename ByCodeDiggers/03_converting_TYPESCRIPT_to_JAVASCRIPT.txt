@@ -1,0 +1,31 @@
+
+we can do it BY DOING THESE 3-4 STEPS , if we dont know typescript then still we cna continue in jaavscriopt  : 
+
+    1) delete tsconfig.json file 
+    2) package.json >  remove the dependency  =  "typescript": "5.0.4"
+    3) now convert the name of the file >> App.tsx to App.js and paste the following code in there 
+
+        import { View, Text } from 'react-native'
+        import React from 'react'
+
+        const App = () => {
+        return (
+            <View>
+            <Text>App</Text>
+            </View>
+        )
+        }
+
+        export default App
+
+from now on , we will continue our tutorial in reactnativeperform folder ..  tjhe anove changes are also imoplekemnted there 
+
+
+Note   : dop this from scrash with help of tehse steps below  :  
+
+    	1) open the emulator in side 
+	2) npx react-native@latest init AwesomeProject
+	3) npm run android
+	4) npm start 
+	5) enter r in turminal 
+			thats it .......
