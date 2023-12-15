@@ -1,0 +1,6 @@
+
+1) package.json ->  dependencies file 
+2) metro config -> used to config the mobil/emulator 
+3) index.js  -> the main file which ussed to give the entry point of react app 
+
+.. rest all are files and folders not need to be bothered about 

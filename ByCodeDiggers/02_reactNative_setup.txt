@@ -38,5 +38,5 @@ step 8:  run the react-nattive
         after runnign aboive command :  it will take around 15-20 mninutes after that run this command : npm start
 
 
-Yeah!!!!!!!!!!!!!
+Yeah  !!!!!!!!!!!!!
 

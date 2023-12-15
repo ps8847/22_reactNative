@@ -1,0 +1,5 @@
+first install  the : npm install @react-navigation/native 
+
+now install this : npm install react-native-screens react-native-safe-area-context
+
+now install this : npm install @react-navigation/native-stack

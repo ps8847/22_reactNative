@@ -24,8 +24,8 @@ from now on , we will continue our tutorial in reactnativeperform folder ..  tjh
 Note   : dop this from scrash with help of tehse steps below  :  
 
     	1) open the emulator in side 
-	2) npx react-native@latest init AwesomeProject
-	3) npm run android
-	4) npm start 
-	5) enter r in turminal 
+	    2) npx react-native@latest init AwesomeProject
+	    3) npm run android
+	    4) npm start 
+	    5) enter r in turminal 
 			thats it .......
