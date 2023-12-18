@@ -1,0 +1,1 @@
+a loading screen in the starting of a app is called splash screen 

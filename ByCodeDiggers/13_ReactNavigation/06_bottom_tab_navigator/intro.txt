@@ -1,0 +1,5 @@
+a screne which have bottom tabs as : home,  profile ,,, and so on ..
+
+to do this thing we need to to install these first 
+
+npm install @react-navigation/bottom-tabs

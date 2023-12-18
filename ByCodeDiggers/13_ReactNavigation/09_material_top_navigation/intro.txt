@@ -1,0 +1,5 @@
+
+a good looking top bar : like we se ein whatsaap
+
+npm install @react-navigation/material-top-tabs react-native-tab-view
+npm install react-native-pager-view

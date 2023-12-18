@@ -1,0 +1,9 @@
+we can add icons ot thte tabs by following  :
+
+npm i react-native-vector-icons
+
+after installing go to the follwing location 
+
+android > app > build.gradle 
+
+add this line at there >> apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")

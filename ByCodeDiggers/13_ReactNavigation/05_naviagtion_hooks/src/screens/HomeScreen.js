@@ -7,14 +7,19 @@ import {
   Dimensions,
 } from 'react-native';
 import React, {useState} from 'react';
+import {useNavigation} from "@react-navigation/native";
 
-export default function HomeScreen({navigation}) {
+export default function HomeScreen() {
+
+  // first hook 
+  const navigationHook = useNavigation()
+
   let [name, setname] = useState('');
   let [email, setemail] = useState('');
   let [password, setpassword] = useState('');
 
   let handelSubmit = () => {
-    navigation.navigate("Profile" , {username:name,userEmail:email,userPassword:password})
+    navigationHook.navigate("Profile" , {username:name,userEmail:email,userPassword:password})
   }
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>

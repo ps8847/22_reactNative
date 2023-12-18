@@ -1,0 +1,61 @@
+
+
+useNavigate()
+
+
+        earlier we used the naviagtion like this : 
+
+        export default function HomeScreen({navigation}) { 
+
+            // our code 
+
+            }
+
+
+        we used it as props ,, but we can also use it as proepr hook as below 
+
+        import {useNavigation} from "@react-navigation/native";
+
+        export default function HomeScreen() {
+
+        const navigationHook = useNavigation()
+
+        let handelSubmit = () => {
+            navigationHook.navigate("Profile" , {username:name,userEmail:email,userPassword:password})
+        }
+        return (
+
+        )
+        }
+
+
+useRoute()
+
+
+        earlier we used to get the params like this below : 
+
+        export default function Profile({route}) {
+                return (
+                )
+            }
+
+
+        we used it as props ,, but we can also use it as proepr hook as below 
+
+        import {useRoute} from "@react-navigation/native";
+
+        export default function Profile() {
+
+        const route = useRoute()
+        return (
+            <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+                <View>
+                    <Text>Name : {route.params.username}</Text>
+                    <Text>Email : {route.params.userEmail}</Text>
+                    <Text>Password : {route.params.userPassword}</Text>
+                </View>
+        
+            </View>
+        )
+        }
+       

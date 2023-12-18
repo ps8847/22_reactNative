@@ -1,0 +1,10 @@
+a sidebar navigation 
+
+step1 : npm install @react-navigation/drawer
+step2 : npm install react-native-gesture-handler react-native-reanimated@~2.2.0
+step3: int the app.js at the top add this >> import 'react-native-gesture-handler';
+step4: in the babel.config.js >>  add this line below : 
+        plugins: ['react-native-reanimated/plugin'],
+
+
+
