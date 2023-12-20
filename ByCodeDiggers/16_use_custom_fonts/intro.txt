@@ -1,0 +1,24 @@
+downlaod some fonts you wnat to use from internet 
+
+go to google > google fonts > search for the fonts > click download family 
+
+download 2-3 fonts 
+
+step1 : now go to downlaod and extract them 
+step2 : makea a assets folder at root of the project and make a sub fodler fonts 
+step3 : in thsoe downloaded fonts open their folders and copy the file with extention ttf and paste it at your fonts folder 
+
+now go to the file in the root of project named : react-native-config.js and paste this code at there : 
+
+        module.exports = {
+            project: {
+                ios: {
+                automaticPodsInstallation: true
+                }
+            },
+            assets: ['./assets/fonts/']
+        }
+
+step4 : run this command : npm i -g react-native-asset
+
+step 5: run this command : npx react-native-asset

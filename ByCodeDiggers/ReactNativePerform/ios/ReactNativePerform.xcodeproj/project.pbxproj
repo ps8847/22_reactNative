@@ -14,6 +14,9 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-ReactNativePerform-ReactNativePerformTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ReactNativePerform-ReactNativePerformTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		828D3657634F4FC6A1F8402C /* ComforterBrush-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B145D9B1491E48A3B7AF2D4A /* ComforterBrush-Regular.ttf */; };
+		F58EF42F9E74476ABE8DE43E /* GideonRoman-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 366754ED69264E11BF0E29D0 /* GideonRoman-Regular.ttf */; };
+		1EB81696929E4CFEA20117C2 /* SupermercadoOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7F140669F034A40AFF8C0F8 /* SupermercadoOne-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ReactNativePerform/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-ReactNativePerform-ReactNativePerformTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativePerform-ReactNativePerformTests.release.xcconfig"; path = "Target Support Files/Pods-ReactNativePerform-ReactNativePerformTests/Pods-ReactNativePerform-ReactNativePerformTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		B145D9B1491E48A3B7AF2D4A /* ComforterBrush-Regular.ttf */ = {isa = PBXFileReference; name = "ComforterBrush-Regular.ttf"; path = "../assets/fonts/ComforterBrush-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		366754ED69264E11BF0E29D0 /* GideonRoman-Regular.ttf */ = {isa = PBXFileReference; name = "GideonRoman-Regular.ttf"; path = "../assets/fonts/GideonRoman-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B7F140669F034A40AFF8C0F8 /* SupermercadoOne-Regular.ttf */ = {isa = PBXFileReference; name = "SupermercadoOne-Regular.ttf"; path = "../assets/fonts/SupermercadoOne-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				CBDBEFF22D964768B18009AB /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -147,6 +154,17 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		CBDBEFF22D964768B18009AB /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				B145D9B1491E48A3B7AF2D4A /* ComforterBrush-Regular.ttf */,
+				366754ED69264E11BF0E29D0 /* GideonRoman-Regular.ttf */,
+				B7F140669F034A40AFF8C0F8 /* SupermercadoOne-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -243,6 +261,9 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				828D3657634F4FC6A1F8402C /* ComforterBrush-Regular.ttf in Resources */,
+				F58EF42F9E74476ABE8DE43E /* GideonRoman-Regular.ttf in Resources */,
+				1EB81696929E4CFEA20117C2 /* SupermercadoOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

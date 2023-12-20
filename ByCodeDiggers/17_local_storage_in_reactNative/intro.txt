@@ -1,0 +1,7 @@
+to use the local storage we need to install the opackage : 
+
+mostly used is reactnative-asyncstorage : 
+
+the command is : npm i @react-native-async-storage/async-storage
+
+then just build and run the app 

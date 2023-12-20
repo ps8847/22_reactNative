@@ -1,0 +1,76 @@
+the steps to how to make apk of our react-native app 
+
+debug vs signed apk 
+
+befor moving to the process of debug apk geenrtaion let's see the difference between debug apk and signed apk 
+
+major difference are the debug flags and signed keys :
+
+    * for debug builds the apk will be signed with the default debug signing keys and debug flag enabled 
+    * for release keys you will have to explicitly specify the keys to sign with and the debug flag will be turned off so that it cannot be debugged
+    * proguard can be turned on for release builds . (also for debug builds but not advised). this step needs to be done explicitly and is false by default
+
+
+    Relase apk is the final apk which we willl share with public 
+
+    step1 : open you original cmd of your project location and paste this command :
+                keytool -genkey -v -keystore your_key_name.keystore -alias your_key_alias -keyalg RSA -keysize 2048 -validity 10000
+
+                then fill the fields which they are asking and but note : remember everything >>>  in the end type yes and press enter
+
+            after pressing enter it will generate a file named as " your_key_name.keystore " 
+
+            just copy that file and paste it at   android > app > ... here          and obviously delete it from the root area 
+
+    step2 : now go to android > app > build.gradle 
+
+                    now edit these below : 
+
+                    i) search for the object named as : signingConfigs and edit it as below :
+                    
+                    signingConfigs {
+
+                            // debug {
+                            //     storeFile file('debug.keystore')
+                            //     storePassword 'android'
+                            //     keyAlias 'androiddebugkey'
+                            //     keyPassword 'android'
+                            // }
+
+                            release {
+                                storeFile file('your_key_name.keystore')
+                                storePassword 'your_passsword_your_entred_previously'
+                                keyAlias 'your_key_alias'
+                                keyPassword 'your_passsword_your_entred_previously'
+                                }
+                        }
+
+                    ii) now search for the buildtypes > release and change it as below 
+
+                     buildTypes {
+                            debug {
+                                signingConfig signingConfigs.debug
+                            }
+                            release {
+                                // Caution! In production, you need to generate your own keystore file.
+                                // see https://reactnative.dev/docs/signed-apk-android.
+                                // signingConfig signingConfigs.debug
+                                signingConfig signingConfigs.release
+                                minifyEnabled enableProguardInReleaseBuilds
+                                proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+                            }
+                        }
+
+before going any further, make sure you have an assets folder under android/app/src/main/assets. If it’s not there, create one. 
+ also run this below step 3 : npm install -g react-native-cli
+
+
+step 3 : run this command :  
+        react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
+
+step 4 : run this command : cd android
+
+step 5 : run this command : gradlew assembleRelease                  it will take time ,, if it will give any erorr then deleet the folders named as drawable from android > app > src > main > res > .. from here
+
+step 6 : now after successful build your sharable app will be available at 
+            android > app > build > outputs > apk > release > .... your apk
