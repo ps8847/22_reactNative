@@ -1,34 +1,38 @@
-import {View, Text, TextInput, StyleSheet, TouchableOpacity} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
+import {
+  View,
+  Text,
+  TextInput,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
 import Ionicon from 'react-native-vector-icons/Ionicons';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import { useState } from 'react';
+import FontAwesome from 'react-native-vector-icons/FontAwesome5';
 
 export default function Home() {
-
-  let [isPasswordVisible , setisPasswordVisible] = useState(false)
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   return (
     <View style={styles.container}>
       <View style={styles.inputBoxContainer}>
         <Ionicon name="mail" size={25} />
-        <TextInput
-          style={styles.inputBox}
-          placeholder="Enter Your Email"
-          placeholderTextColor={'gray'}
-        />
+        <TextInput style={styles.inputBox} placeholder="Enter Your Email" />
       </View>
+      {/*  */}
       <View style={styles.inputBoxContainer}>
-        <FontAwesome5 name="lock" size={25} />
+        <FontAwesome name="lock" size={25} />
         <TextInput
           style={styles.inputBox}
           placeholder="Enter Your Password"
           secureTextEntry={isPasswordVisible ? false : true}
-          placeholderTextColor={'gray'}
         />
-        <TouchableOpacity onPress={() => setisPasswordVisible(!isPasswordVisible)}>
-        <FontAwesome5 name={isPasswordVisible ? "eye-slash" : "eye"} size={25} />
+        <TouchableOpacity
+          onPress={() => setIsPasswordVisible(!isPasswordVisible)}>
+          <FontAwesome
+            name={isPasswordVisible ? 'eye-slash' : 'eye'}
+            size={25}
+          />
         </TouchableOpacity>
-   
+        {/* <FontAwesome name="eye-slash" size={25} /> */}
       </View>
     </View>
   );
@@ -36,10 +40,11 @@ export default function Home() {
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
     flex: 1,
+    alignItems: 'center',
   },
   inputBoxContainer: {
+    // backgroundColor: 'red',
     alignItems: 'center',
     flexDirection: 'row',
     borderWidth: 1,
@@ -49,7 +54,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   inputBox: {
-    marginHorizontal:10,
-    flex:1
+    marginHorizontal: 10,
+    flex: 1,
   },
 });
