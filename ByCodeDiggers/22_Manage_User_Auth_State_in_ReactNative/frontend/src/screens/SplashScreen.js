@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 //
 import Logo from '../../assets/img/logo.jpg';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { StackActions, useNavigation } from '@react-navigation/native';
 
 export default function SplashScreen() {
@@ -11,7 +12,14 @@ const navigation = useNavigation();
 
   useEffect(() => {
     setTimeout(async () => {
-navigation.dispatch(StackActions.replace("Home"))
+     const isUserLogin = await AsyncStorage.getItem('isUserLogin')
+
+     if(isUserLogin == 'true'){
+      navigation.dispatch(StackActions.replace('Home'))
+    } else {
+       navigation.dispatch(StackActions.replace('Login'))
+
+     }
     }, 3000);
   }, []);
 

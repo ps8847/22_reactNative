@@ -8,10 +8,10 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
-import {useNavigation} from '@react-navigation/native';
+import {StackActions, useNavigation} from '@react-navigation/native';
 import FontAwsome from 'react-native-vector-icons/FontAwesome5';
 import axios from 'axios';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 //
 import BackgroundImg from '../../assets/img/bg-transferent.png';
 
@@ -22,47 +22,44 @@ export default function Login() {
   //
   const navigation = useNavigation();
 
-  const handleServerError = (err, specificMessages = {}) => {
-    if (err.response) {
-      const status = err.response.status;
-      const defaultMessage = 'An error occurred';
-  
-      if (status === 500) {
-        alert(specificMessages[status] || 'Internal Server Error');
-      } else if (status === 401 || status === 404) {
-        alert(specificMessages[status] || 'User Not Found');
-      } else {
-        alert(specificMessages[status] || defaultMessage);
-      }
-    } else if (err.request) {
-      console.log('No response received:', err.request);
-      alert('No response received from the server');
-    } else {
-      console.log('Error during request setup:', err.message);
-      alert('Error during request setup');
-    }
+  const handleServerError = (err, customMessages) => {
+    // Handle server errors here
+    console.error(err);
+
+    // You can customize error messages based on status codes
+    const errorMessage = customMessages[err.response.status] || 'Internal Server Error';
+    alert(errorMessage);
   };
 
   const loginUser = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/login', {
+      const response = await axios.post('http://192.168.213.47:3000/login', {
         email: email,
         password: password,
       });
-  
+
+      console.log("response is , " , response.data);
       if (response.data.status === 'success') {
-        alert('User Login Successfully');
+        const userData = {
+          email : response.data.user.email,
+          uid : response.data.user.id,
+        }
+
+        await AsyncStorage.setItem("user_data" , JSON.stringify(userData))
+        await AsyncStorage.setItem("isUserLogin" , 'true')
+
+        navigation.dispatch(StackActions.replace("Home"))
+
       } else {
         alert('User Not Found');
       }
-  
+
       console.log(response.data);
     } catch (err) {
       handleServerError(err);
     }
   };
   
-
   return (
     <View style={styles.container}>
       <StatusBar hidden={true} />
@@ -76,7 +73,7 @@ export default function Login() {
       <View style={styles.bottomBackgroundImgContainer}></View>
       <View style={styles.formContainer}>
         <View style={styles.formTopContainer}>
-          <FontAwsome name="angle-left" size={30} color="#fff" />
+          {/* <FontAwsome name="angle-left" size={30} color="#fff" /> */}
 
           <Text style={{color: '#fff', fontSize: 30, fontWeight: 'bold'}}>
             Hi!

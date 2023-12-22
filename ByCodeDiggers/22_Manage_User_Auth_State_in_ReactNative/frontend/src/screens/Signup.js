@@ -17,54 +17,41 @@ export default function Signup() {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  //
+  
   const navigation = useNavigation();
 
-  const handleServerError = (err, specificMessages = {}) => {
-    if (err.response) {
-      const status = err.response.status;
-      const defaultMessage = 'An error occurred';
-  
-      if (status === 500) {
-        alert(specificMessages[status] || 'Internal Server Error');
-      } else if (status === 401 || status === 404) {
-        alert(specificMessages[status] || 'User Not Found');
+  const handleServerError = (err, customMessages) => {
+    // Handle server errors here
+    console.error(err);
+
+    // You can customize error messages based on status codes
+    const errorMessage = customMessages[err.response.status] || 'Internal Server Error';
+    alert(errorMessage);
+  };
+
+  const signupUser = async () => {
+    try {
+      const response = await axios.post('http://192.168.213.47:3000/signup', {
+        email: email,
+        password: password,
+      }, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.data.status === 'success') {
+        alert('User Created Successfully');
       } else {
-        alert(specificMessages[status] || defaultMessage);
+        alert('User Not Created');
       }
-    } else if (err.request) {
-      console.log('No response received:', err.request);
-      alert('No response received from the server');
-    } else {
-      console.log('Error during request setup:', err.message);
-      alert('Error during request setup');
+
+      console.log(response.data);
+    } catch (err) {
+      handleServerError(err, { 500: 'Custom Internal Server Error Message' });
     }
   };
 
- const signupUser = async () => {
-  try {
-    const response = await axios.post('http://localhost:3000/signup', {
-      email: email,
-      password: password,
-    }, {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
-    if (response.data.status === 'success') {
-      alert('User Created Successfully');
-    } else {
-      alert('User Not Created');
-    }
-
-    console.log(response.data);
-  } catch (err) {
-    handleServerError(err, { 500: 'Custom Internal Server Error Message' });
-  }
-};
-
-  
   return (
     <View style={styles.container}>
       <StatusBar hidden={true} />
