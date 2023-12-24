@@ -1,0 +1,4 @@
+its a puller  ,  when we pull up our screen thena  menu will be pulled up along iwth it 
+
+first intall it by : npm install react-native-modal
+                     

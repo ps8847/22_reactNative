@@ -1,0 +1,27 @@
+we will get to know who to CHANGE the app's icon in React native 
+
+it has different scnerios for both ANDROID and IOS devices 
+
+for Android : 
+
+    first of all go to google and search "android app icon generator" or go to this website directly : https://easyappicon.com/
+
+
+    just make your icon and download them ..  after download extract them 
+
+    step1 : go to android > app > src > main > res 
+            you will see folders there 
+
+    step 2 : now replace the exact same name folders with the folders you downloaded recently came along with the icons you downlaoded
+
+now restart your app , thats it 
+
+For IOS :
+
+      first of all go to google and search "android app icon generator" or go to this website directly : https://easyappicon.com/
+
+      just make your icon and download them ..  after download extract them 
+
+    steps 1: got to ios > your_project_named_folder > Images.xcassets > AppIcon.appiconset
+
+    step 2: now the icons you have downloaded tehre will be ios folder and will haave a folder named as AppIcon.appiconset        ,, nowe just replace the ios > your_project_named_folder > Images.xcassets > AppIcon.appiconset with that folder you downlaoded recently

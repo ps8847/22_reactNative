@@ -1,0 +1,12 @@
+we will implement that hwo to pkay aa video in our reactnative app 
+
+
+install  :  npm i react-native-video@6.0.0-alpha.10
+
+
+now for 02_with_controllers 
+        >> npm i react-native-video-controls --legacy-peer-deps
+
+
+now for 03_make_custom_controllers 
+        >> npm install @react-native-community/slider --legacy-peer-deps

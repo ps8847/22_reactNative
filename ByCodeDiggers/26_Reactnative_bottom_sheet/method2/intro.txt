@@ -1,0 +1,7 @@
+a READYMADE library for bottom sheet : 
+
+install : npm i react-native-raw-bottom-sheet
+
+
+documemntation is at : 
+https://www.npmjs.com/package/react-native-raw-bottom-sheet

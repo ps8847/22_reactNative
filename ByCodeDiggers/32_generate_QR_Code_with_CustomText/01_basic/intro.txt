@@ -1,0 +1,3 @@
+we will make  a small app which will convert our text to a qr code 
+
+install : npm i -S react-native-svg react-native-qrcode-svg

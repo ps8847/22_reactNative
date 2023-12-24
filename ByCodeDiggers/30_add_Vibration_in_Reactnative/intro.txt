@@ -1,0 +1,11 @@
+to vibrate we need to give the permisison : ,,
+
+for that go to   android > app > src > main > AndroidManifest.xml 
+
+and paste this below line  : 
+        <uses-permission android:name="android.permission.VIBRATE"/>
+
+        restart the app 
+
+
+        Note : it will observed in the Physical device only noty in emulators

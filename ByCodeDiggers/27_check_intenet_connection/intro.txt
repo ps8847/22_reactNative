@@ -1,0 +1,3 @@
+to check that user's phopne is connected to internet or not ?
+
+npm i @react-native-community/netinfo
