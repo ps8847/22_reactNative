@@ -1,0 +1,33 @@
+Here we will make the app like  , , make qr coide and scan it from anotehr device 
+
+
+first go to 
+
+Android > app > src > main > AndroidManifest.xml and add this line :
+
+<uses-permission android:name="android.permission.VIBRATE"/>
+<uses-permission android:name="android.permission.CAMERA" />
+
+
+now install these : npm install react-native-camera react-native-qrcode-scanner react-native-permissions
+
+now go to android > app > build.gradle and add this line below inside the object :
+
+    android {
+        defaultConfig{
+            ...
+            missingDimensionStrategy 'react-native-camera', 'general'
+        }
+    }
+
+
+now install : npm i deprecated-react-native-prop-types --legacy-peer-deps
+
+now go to node_modules > react-native-camera > src > RNCamera.js 
+
+and remove the "ViewPropTypes" which is getting imported from 'react-native' , ,instead of that 
+add this line below : 
+import {ViewPropTypes} from "deprecated-react-native-prop-types";
+
+
+now restart your app 
